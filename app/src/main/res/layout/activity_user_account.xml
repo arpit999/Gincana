@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HomeScreenActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/profile_blue_curve">
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top|start"
+            android:layout_margin="15dp"
+            android:background="@mipmap/back_button"
+            android:padding="16dp" />
+
+    </RelativeLayout>
+
+    <com.bicubic.gincana.widget.RoundedImageView
+        android:id="@+id/image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignBottom="@id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-20dp"
+        android:src="@drawable/profile" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_profile_setting"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/profile_ic_setting" />
+
+        <androidx.core.widget.Space
+            android:layout_width="90dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@mipmap/profile_ic_camera" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginTop="30dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.bicubic.gincana.widget.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:text="Hi Sendra"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:typeface="varelaround_regular.ttf" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/complete_tours"
+                    android:layout_toLeftOf="@+id/complete_tours"
+                    android:layout_toRightOf="@+id/complete_tours"
+                    android:background="@color/white_three" />
+
+                <com.bicubic.gincana.widget.CustomTextView
+                    android:id="@+id/complete_tours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/round_corner_black"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:text="Completed tours"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp"
+                    app:typeface="varelaround_regular.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/complete_tours"
+                    android:layout_toRightOf="@+id/complete_tours"
+                    android:layout_toStartOf="@+id/complete_tours"
+                    android:background="@color/white_three"
+                    android:layout_toEndOf="@+id/complete_tours" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.RecyclerView
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:id="@+id/rv_complete_tours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/vouchers"
+                    android:layout_toLeftOf="@+id/vouchers"
+                    android:layout_toRightOf="@+id/vouchers"
+                    android:background="@color/white_three" />
+
+                <com.bicubic.gincana.widget.CustomTextView
+                    android:id="@+id/vouchers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/round_corner_black"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:text="Vouchers"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp"
+                    app:typeface="varelaround_regular.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/vouchers"
+                    android:layout_toRightOf="@+id/vouchers"
+                    android:layout_toStartOf="@+id/vouchers"
+                    android:background="@color/white_three" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.RecyclerView
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:id="@+id/rv_vouchers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/badges"
+                    android:layout_toLeftOf="@+id/badges"
+                    android:layout_toRightOf="@+id/badges"
+                    android:background="@color/white_three" />
+
+                <com.bicubic.gincana.widget.CustomTextView
+                    android:id="@+id/badges"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/round_corner_black"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:text="Badges"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp"
+                    app:typeface="varelaround_regular.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/badges"
+                    android:layout_toRightOf="@+id/badges"
+                    android:layout_toStartOf="@+id/badges"
+                    android:background="@color/white_three" />
+
+            </RelativeLayout>
+
+            <androidx.appcompat.widget.RecyclerView
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:id="@+id/rv_badges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

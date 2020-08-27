@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_one"
+    android:fillViewport="true"
+    tools:context="com.bicubic.gincana.activity.SignupActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lin_main"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:background="@drawable/header_logo" />
+
+        <com.bicubic.gincana.widget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"
+            android:text="New account"
+            android:textColor="@color/black"
+            android:textSize="@dimen/signin_size"
+            app:typeface="opensans_bold.ttf" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal"
+            android:hint="Name"
+            android:maxLines="1"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:padding="10dp" />
+
+        <EditText
+            android:maxLines="1"
+            android:id="@+id/et_email"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal"
+            android:hint="E-mail"
+            android:padding="10dp" />
+
+        <EditText
+            android:maxLines="1"
+            android:id="@+id/et_password"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:gravity="center_horizontal"
+            android:hint="Password"
+            android:padding="10dp" />
+
+        <Button
+            android:id="@+id/bt_signup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/round_corner_green"
+            android:text="Create account"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <com.bicubic.gincana.widget.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="Or signup with:"
+            app:typeface="varelaround_regular.ttf" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <FrameLayout
+                android:id="@+id/FrameLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/bt_fb_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/round_corner_blue"
+                    android:textColor="@color/white_one"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="Facebook"
+                    android:textAllCaps="false"
+                    android:textSize="18sp" />
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/fb_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_corner_sky"
+                android:text="Twitter"
+                android:textAllCaps="false"
+                android:textColor="@color/white_one"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <com.bicubic.gincana.widget.CustomTextView
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:typeface="varelaround_regular.ttf"
+            android:text="@string/when_creating_an_account_you_n_accept_our_term_and_conditions" />
+
+    </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/lin_main"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="15dp">
+
+            <com.bicubic.gincana.widget.CustomTextView
+                android:id="@+id/still_dont_acc"
+                app:typeface="varelaround_regular.ttf"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?" />
+
+            <com.bicubic.gincana.widget.CustomTextView
+                android:paddingBottom="10dp"
+                android:id="@+id/tv_click_here"
+                app:typeface="varelaround_regular.ttf"
+                android:layout_below="@+id/still_dont_acc"
+                android:textSize="16sp"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Click here."
+                android:textColor="@color/sky" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

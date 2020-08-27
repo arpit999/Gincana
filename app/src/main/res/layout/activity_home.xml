@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HomeScreenActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@drawable/profile_blue_curve">
+
+    </RelativeLayout>
+
+    <com.bicubic.gincana.widget.RoundedImageView
+        android:id="@+id/imag_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-20dp"
+        android:src="@drawable/profile" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/relativeLayout1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.bicubic.gincana.widget.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:text="Hi Sendra"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:typeface="varelaround_regular.ttf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/home_ic_tour" />
+
+                    <com.bicubic.gincana.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2 tours"
+                        android:textColor="@color/sky"
+                        app:typeface="varelaround_regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/home_ic_distance" />
+
+                    <com.bicubic.gincana.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="7.4 km"
+                        android:textColor="@color/yellow"
+                        app:typeface="varelaround_regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/home_ic_diamond" />
+
+                    <com.bicubic.gincana.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="8"
+                        android:textColor="@color/green_dark"
+                        app:typeface="varelaround_regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:background="@mipmap/home_ic_badge" />
+
+                    <com.bicubic.gincana.widget.CustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="4/73"
+                        android:textColor="@color/red_dark"
+                        app:typeface="varelaround_regular.ttf" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.bicubic.gincana.widget.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:text="To start Gincana is quite easy, please follow this three simple steps: "
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:typeface="varelaround_regular.ttf" />
+
+            <RelativeLayout
+                android:id="@+id/rel_select_tour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/round_corner_white"
+                android:paddingBottom="3dp"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="3dp">
+
+                <ImageView
+                    android:id="@+id/img_ic_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/checkpoint_ic_yellow" />
+
+                <com.bicubic.gincana.widget.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/img_ic_one"
+                    android:layout_toEndOf="@+id/img_ic_one"
+                    android:text="Select your tour"
+                    android:textColor="@color/black"
+                    app:typeface="varelaround_regular.ttf"
+                    android:textSize="20sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_get_zone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_corner_white"
+                android:paddingBottom="3dp"
+                android:paddingLeft="20dp"
+                android:paddingStart="20dp"
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="3dp">
+
+                <ImageView
+                    android:id="@+id/img_ic_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/checkpoint_ic_green" />
+
+                <com.bicubic.gincana.widget.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_toRightOf="@+id/img_ic_two"
+                    android:layout_toEndOf="@+id/img_ic_two"
+                    android:text="Get to the zone"
+                    android:textColor="@color/black"
+                    app:typeface="varelaround_regular.ttf"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/round_corner_white"
+                android:gravity="center_horizontal"
+                android:paddingBottom="3dp"
+                android:paddingEnd="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="10dp"
+                android:paddingStart="10dp"
+                android:paddingTop="3dp">
+
+                <ImageView
+                    android:id="@+id/img_ic_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/checkpoint_ic_red" />
+
+                <com.bicubic.gincana.widget.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_toRightOf="@+id/img_ic_three"
+                    android:layout_toEndOf="@+id/img_ic_three"
+                    android:text="Start!"
+                    app:typeface="varelaround_regular.ttf"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <com.bicubic.gincana.widget.CustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/you_can_t_find_a_tour_near_n_your_location_ask_for_it"
+                android:textSize="16sp"
+                android:paddingBottom="10dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

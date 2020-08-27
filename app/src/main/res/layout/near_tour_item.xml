@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rel_main"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_one"
+    android:padding="8dp">
+
+    <!-- Thumbnail Image -->
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/img_tour"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/profile" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/img_tour"
+        android:layout_toLeftOf="@+id/lin_download"
+        android:layout_toRightOf="@+id/img_tour"
+        android:layout_toStartOf="@+id/lin_download"
+        android:layout_marginRight="5dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center_vertical">
+
+        <!-- Movie Title -->
+        <com.bicubic.gincana.widget.CustomTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Title"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:typeface="varelaround_regular.ttf" />
+
+
+        <com.bicubic.gincana.widget.CustomTextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_title"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:paddingBottom="5dp"
+            android:maxLines="2"
+            android:text="The historic center of Mexico City (Spanish: Centro Histórico de la Ciudad de México), also known as the Centro or Centro Histórico, is the central neighborhood in Mexico City, Mexico, focused on Zócalo or main plaza and extending in all directions for a"
+            app:typeface="varelaround_regular.ttf" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingRight="8dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/tour_delete_button"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="20 MB" />
+
+    </LinearLayout>
+
+</RelativeLayout>

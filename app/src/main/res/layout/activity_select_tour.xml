@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#a3b1ef"
+    android:fitsSystemWindows="true"
+    tools:context=".activity.SelectTourActivity">
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView_tour_select"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:style_url="mapbox://styles/bicubicstudios/citpl5t1c00102iqcxb2jlkhi"
+        mapbox:zoom="10" />
+
+    <LinearLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="-10dp"
+            android:gravity="top">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/nearast_tours"
+                    android:layout_toLeftOf="@+id/nearast_tours"
+                    android:layout_toRightOf="@+id/nearast_tours"
+                    android:layout_toStartOf="@+id/nearast_tours"
+                    android:background="@color/black" />
+
+                <com.bicubic.gincana.widget.CustomTextView
+                    android:id="@+id/nearast_tours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/round_corner_black"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:text="Nearest tours"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp"
+                    app:typeface="varelaround_regular.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/nearast_tours"
+                    android:layout_toRightOf="@+id/nearast_tours"
+                    android:layout_toStartOf="@+id/nearast_tours"
+                    android:background="@color/black" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            android:background="#fff" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start">
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top|start"
+            android:layout_margin="15dp"
+            android:background="@mipmap/back_button"
+            android:padding="16dp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <RelativeLayout
+            android:id="@+id/rel_bottom_tour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel_tour_first"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:background="@color/white_one"
+                android:padding="8dp">
+
+                <!-- Thumbnail Image -->
+                <ImageView
+                    android:id="@+id/img_tour"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/profile" />
+
+
+                <RelativeLayout
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/img_tour"
+                    android:layout_toLeftOf="@+id/lin_download"
+                    android:layout_toRightOf="@+id/img_tour"
+                    android:layout_toStartOf="@+id/lin_download"
+                    android:gravity="center_vertical"
+                    android:paddingTop="10dp">
+
+                    <!-- Movie Title -->
+                    <com.bicubic.gincana.widget.CustomTextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:typeface="varelaround_regular.ttf"
+                        tools:ignore="PrivateResource" />
+
+                    <com.bicubic.gincana.widget.CustomTextView
+                        android:id="@+id/tv_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_title"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
+                        android:maxLines="2"
+                        app:typeface="varelaround_regular.ttf" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingRight="8dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@mipmap/tour_delete_button"
+                        android:gravity="center_horizontal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="20 MB" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_more_tour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/complete_tours"
+                    android:layout_toLeftOf="@+id/complete_tours"
+                    android:layout_toRightOf="@+id/complete_tours"
+                    android:background="@color/black" />
+
+                <com.bicubic.gincana.widget.CustomTextView
+                    android:id="@+id/complete_tours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/round_corner_black"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:text="Nearest tours"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp"
+                    app:typeface="varelaround_regular.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/complete_tours"
+                    android:layout_toRightOf="@+id/complete_tours"
+                    android:layout_toStartOf="@+id/complete_tours"
+                    android:background="@color/black" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</android.support.design.widget.CoordinatorLayout>

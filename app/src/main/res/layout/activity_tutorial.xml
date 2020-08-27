@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attrs="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_tutorial"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bicubic.gincana.activity.TutorialActivity">
+
+    <androidx.core.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true" />
+
+    <com.rd.PageIndicatorView
+        android:id="@+id/pageIndicatorView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        attrs:piv_animationType="thinWorm"
+        attrs:piv_interactiveAnimation="true"
+        attrs:piv_padding="15dp"
+        attrs:piv_radius="5dp"
+        attrs:piv_unselectedColor="@color/sky"
+        attrs:piv_selectedColor="@color/sky_dark"
+        attrs:piv_viewPager="@id/pager" />
+
+</RelativeLayout>

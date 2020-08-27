@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_select_tour"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bicubic.gincana.activity.StartTourActivity">
+
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top|start"
+            android:layout_margin="15dp"
+            android:background="@mipmap/back_button"
+            android:padding="16dp" />
+
+    <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:style_url="mapbox://styles/bicubicstudios/citpl5t1c00102iqcxb2jlkhi"
+        mapbox:zoom="10"/>
+
+   <!-- <com.mapbox.mapboxsdk.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        mapbox:access_token="@string/access_token"
+        mapbox:my_location_enabled="true"
+        mapbox:style_url="mapbox://styles/bicubicstudios/citpl5t1c00102iqcxb2jlkhi"
+        mapbox:zoom="11"
+        mapbox:zoom_enabled="true" />-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <com.bicubic.gincana.widget.CustomTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2.5"
+                    android:textColor="@color/white_two"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <com.bicubic.gincana.widget.CustomTextView
+                        android:layout_width="0dp"
+                        android:textColor="@color/white_two"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:layout_weight="1"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:background="@mipmap/ic_dimand_blue" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.5"
+                    android:background="@mipmap/tutorial_ic_coin"
+                    android:gravity="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginStart="50dp"
+                android:layout_weight="1"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:padding="7dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/tutorial_checkpoint_off"
+                    android:layout_height="20dp" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/tutorial_checkpoint_off"
+                    android:layout_height="20dp" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/tutorial_checkpoint_off"
+                    android:layout_height="20dp" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/tutorial_checkpoint_off"
+                    android:layout_height="20dp" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/tutorial_checkpoint_off"
+                    android:layout_height="20dp" />
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:background="@mipmap/tutorial_cross_off"
+                    android:layout_height="20dp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_main"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/ic_launcher" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

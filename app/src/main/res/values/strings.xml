@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Gincana</string>
+
+    <string name="access_token">pk.eyJ1IjoiYmljdWJpY3N0dWRpb3MiLCJhIjoiY2l0bDE3bHp1MDFxZDJ0cGd2d2sxc2g0cSJ9.tUnkV5ep-r8erX6W9jHSJw</string>
+    <string name="facebook_id">598191377035778</string>
+
+    <string name="when_creating_an_account_you_n_accept_our_term_and_conditions">When creating an account you \n accept our<font color='blue'> Term and Conditions.</font></string>
+    <string name="you_can_t_find_a_tour_near_n_your_location_ask_for_it">You can\'t find a tour near \n your location? <font color='blue'>Ask for it.</font></string>
+
+    <string-array name="IntroTitle">
+        <item>Have fun while descovering the world</item>
+        <item>We love surprising you</item>
+        <item>Awake your senses</item>
+        <item>We need some permissions</item>
+        <item>Security first</item>
+
+    </string-array>
+
+
+    <string-array name="IntroDesc">
+
+        <item>Gincana is a game in the real wordl. You must explore an area and overcome different challenges that we have prepared on its emblamatic places</item>
+        <item>We will test all your skill and abilities to analyze your surroundings. Clear all the map and complete the challenges to get a big prize </item>
+        <item>Some challenges may seem to but information can be found anywhere. Don\'t be shy to ask the locals if you are lost, that will enhance your tour </item>
+        <item>For the app to run smooth we need to access your GPS and camera. None of youre information is shared without your expess premission. </item>
+
+        <item>Do not drive any kind of vehicle while playing. Always pay attention to your surroundings while playing.</item>
+
+    </string-array>
+    <string name="title_activity_get_to_zone">Map</string>
+
+</resources>

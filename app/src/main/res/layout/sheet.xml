@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+
+
+    <!--<android.support.v7.widget.RecyclerView
+        android:background="@color/colorAccent"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_more_tour"
+        android:layout_marginBottom="16dp" />-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_gravity="bottom">
+
+        <RelativeLayout
+            android:background="@android:color/transparent"
+            android:id="@+id/rel_bottom_tour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rel_tour_first"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:background="@color/white_one"
+                android:padding="8dp">
+
+                <androidx.appcompat.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_more_tour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/complete_tours"
+                    android:layout_toLeftOf="@+id/complete_tours"
+                    android:layout_toRightOf="@+id/complete_tours"
+                    android:background="@color/black" />
+
+                <com.bicubic.gincana.widget.CustomTextView
+                    android:id="@+id/complete_tours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/round_corner_black"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingTop="4dp"
+                    android:text="Nearest tours"
+                    android:textColor="@color/yellow"
+                    android:textSize="16sp"
+                    app:typeface="varelaround_regular.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/complete_tours"
+                    android:layout_toRightOf="@+id/complete_tours"
+                    android:layout_toStartOf="@+id/complete_tours"
+                    android:background="@color/black" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>
